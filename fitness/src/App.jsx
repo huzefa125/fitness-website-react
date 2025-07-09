@@ -9,7 +9,7 @@ import Plan from './components/Plan';
 
 function App() {
   return (
-    <div style={{ minHeight: '100vh', backgroundColor: '#0D0D0D ' }}>
+    <div style={{ minHeight: '100vh', backgroundColor: '#fafaf7 ' }}>
       <BrowserRouter>
        
         <Routes>
