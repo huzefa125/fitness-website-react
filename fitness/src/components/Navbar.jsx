@@ -20,7 +20,7 @@ function Navbar() {
           <h1 className="font-bold text-4xl">Fitness</h1>
           <div className="flex space-x-8 ml-60 font-semibold font-[sans-serif]">
             <Link to="/" className={getLink('/')}>Home</Link>
-            <Link to="/subscription" className={getLink('/subscription')}>Subscription</Link>
+            <Link to="/subscription" className={getLink('/subscription')}>Exercise</Link>
             <Link to="/about" className={getLink('/about')}>About us</Link>
             <Link to="/contact" className={getLink('/contact')}>Contact</Link>
           </div>
