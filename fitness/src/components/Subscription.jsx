@@ -1,9 +1,9 @@
 import React from 'react'
-
+import Navbar from './Navbar'
 function Subscrition() {
   return (
     <div>
-        Subscribtion
+        <Navbar></Navbar>
     </div>
   )
 }

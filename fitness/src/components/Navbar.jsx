@@ -1,29 +1,40 @@
-import React from 'react'
-import logo from '../assets/Flux_Dev_A_highenergy_modern_fitness_poster_with_a_bold_and_cl_1.jpg'
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 function Navbar() {
-return (
-    <div>
-        <div className=' p-7'>
-            <nav className='w-full h-10 items-center flex  rounded-2xl flex-col' style={{backgroundColor:"fafaf7"}}>
-                <div className='flex items-center ml-15 '>
-                    <h1 className='font-bold text-4xl'>Fitness</h1>
-                    <div className='flex space-x-8 ml-60 font-semibold font-[sans-serif]'>
-                        <Link to='/' className=' '>Home</Link>
-                        <Link to='/plan' className=' '>Plan</Link>
-                        <Link to='/subscription' className=' '>Subscription</Link>
-                        <Link to='/about' className=''>About us</Link>
-                        <Link to='/contact' className=''>Contact</Link>
-                    </div>
-                    <div className='button ml-75'>
-                        <button  className=' rounded-xl p-2 h-10 w-30  text-white bg-blue-600 font-medium font-[sans]' style={{backgroundColor:"#282a28"}} >Sign in</button>
-                    </div>
-                </div>
-            </nav>
+  const location = useLocation();
+
+  const getLink = (path) => {
+    return location.pathname === path
+      ? 'text-blue-600 font-bold'
+      : 'text-black hover:text-blue-500';
+  };
+
+  return (
+    <div className="p-7">
+      <nav
+        className="w-full h-10 items-center flex rounded-2xl flex-col"
+        style={{ backgroundColor: '#fafaf7' }}
+      >
+        <div className="flex items-center ml-15">
+          <h1 className="font-bold text-4xl">Fitness</h1>
+          <div className="flex space-x-8 ml-60 font-semibold font-[sans-serif]">
+            <Link to="/" className={getLink('/')}>Home</Link>
+            <Link to="/subscription" className={getLink('/subscription')}>Subscription</Link>
+            <Link to="/about" className={getLink('/about')}>About us</Link>
+            <Link to="/contact" className={getLink('/contact')}>Contact</Link>
+          </div>
+          <div className="button ml-75">
+            <Link to="/sign">
+              <button className="rounded-xl p-2 h-10 w-30 text-white font-medium font-[sans]" style={{ backgroundColor: '#282a28' }}>
+                Sign in
+              </button>
+            </Link>
+          </div>
         </div>
+      </nav>
     </div>
-)
+  );
 }
 
-export default Navbar
+export default Navbar;

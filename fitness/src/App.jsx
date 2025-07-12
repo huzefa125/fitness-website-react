@@ -1,27 +1,27 @@
-import React from 'react'
-import Navbar from './components/Navbar';
+import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import Contact from './components/Contact';
 import About from './components/About';
-import Subscrition from './components/Subscription';
+import Subscription from './components/Subscription';
 import Plan from './components/Plan';
+import Sign from './components/Sign'; 
 
 function App() {
   return (
-    <div style={{ minHeight: '100vh', backgroundColor: '#fafaf7 ' }}>
+    <div style={{ minHeight: '100vh', backgroundColor: '#fafaf7' }}>
       <BrowserRouter>
-       
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/About' element={<About />} />
-          <Route path='/subscription' element={<Subscrition />} />
-          <Route path='/Contact' element={<Contact />} />
-          <Route path='/Plan' element={<Plan />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/subscription" element={<Subscription />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/plan" element={<Plan />} />
+          <Route path="/sign" element={<Sign />} />
         </Routes>
       </BrowserRouter>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,5 +1,8 @@
 import React from 'react'
 import poster from '../assets/front.jpg'
+import { gsap } from 'gsap';
+import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
+gsap.registerPlugin(DrawSVGPlugin);
 function Poster() {
   return (
     <div>

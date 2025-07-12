@@ -29,6 +29,17 @@ export const ClassProvider = ({ children }) => {
         description :"Doing Cardio is best for muscle excercide and after cardio body colld be more flexible.",
         icon:"",
     },
+    {
+        id:5,
+        title:"Live classes",
+        description:"In Live Classes you will provided i to do yoga and after taht you will get certificate for it",
+        icon:"",
+    },
+    {
+        id:"6",
+        title:"Nutrition guide",
+        description:"In this you will provideed your nutititional value and what to eat and how much to eat and very affordable price"
+    }
     // you can add Yoga, Cardio, HIIT here too
   ]);
 
@@ -38,3 +49,6 @@ export const ClassProvider = ({ children }) => {
     </ClassContext.Provider>
   );
 };
+
+
+

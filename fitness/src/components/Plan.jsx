@@ -1,11 +1,12 @@
 import React from 'react'
+import Navbar from './Navbar'
 
 function Plan() {
   return (
     <div>
-        plan
+      <Navbar></Navbar>
+      
     </div>
   )
 }
-
 export default Plan
